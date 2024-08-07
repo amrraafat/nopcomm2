@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "_Root.Head";
+}
+@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.BodyStartHtmlTagAfter })
+@{ await Html.RenderPartialAsync("_Notifications"); }
+@{ await Html.RenderPartialAsync("_JavaScriptDisabledWarning"); }
+@{ await Html.RenderPartialAsync("_OldInternetExplorerWarning"); }
+
+    <div class="master-wrapper-content">
+        <script asp-location="Footer">
+            var localized_data = {
+                AjaxCartFailure: "@T("AjaxCart.Failure")"
+            };
+            AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart', localized_data);
+        </script>
+        @{ await Html.RenderPartialAsync("_Header"); }
+        <div class="header-bottom">
+            <div class="header-menu">
+                @await Component.InvokeAsync(typeof(TopMenuViewComponent))
+             </div>
+        </div>
+
+
+        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ContentBefore })
+        @if (IsSectionDefined("Breadcrumb"))
+        {
+            @RenderSection("Breadcrumb")
+        }
+        @*ajax loading window*@
+        <div class="ajax-loading-block-window" style="display: none">
+            <div class="loading-image">
+            </div>
+        </div>
+        <div class="content">
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ContentAfter })
+        @await Component.InvokeAsync(typeof(EuCookieLawViewComponent))
+        @await Component.InvokeAsync(typeof(FooterViewComponent))
+    </div>
+@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.BodyEndHtmlTagBefore })
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/Themes/CoreTheme/Content/lib/wow/wow.min.js"></script>
+<script src="~/Themes/CoreTheme/Content/lib/easing/easing.min.js"></script>
+<script src="~/Themes/CoreTheme/Content/lib/waypoints/waypoints.min.js"></script>
+<script src="~/Themes/CoreTheme/Content/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="~/Themes/CoreTheme/Content/lib/tempusdominus/js/moment.min.js"></script>
+<script src="~/Themes/CoreTheme/Content/lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="~/Themes/CoreTheme/Content/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="~/Themes/CoreTheme/Content/js/main.js"></script>

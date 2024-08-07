@@ -1,0 +1,24 @@
+﻿<nav class="top-menu">
+    <div class="headerlinks">
+        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderBefore })
+        @await Component.InvokeAsync(typeof(HeaderLinksViewComponent))
+    </div>
+</nav>
+<div class="header">
+    <div class="row">
+        <div class="col-sm-5 col-md-5">
+            @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderBefore })
+        </div>
+        <div class="col-sm-7 col-md-7">
+            <div class="header-selectors-wrapper">
+                <div class="header-selectors">
+                    @await Component.InvokeAsync(typeof(TaxTypeSelectorViewComponent))
+                    @await Component.InvokeAsync(typeof(CurrencySelectorViewComponent))
+                    @await Component.InvokeAsync(typeof(LanguageSelectorViewComponent))
+                    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderSelectors })
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+

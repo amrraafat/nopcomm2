@@ -1,0 +1,35 @@
+﻿{
+  "InstalledPluginNames": [
+    "Obsolete field, using only for compatibility"
+  ],
+  "InstalledPlugins": [
+    {
+      "SystemName": "Payments.Manual",
+      "Version": "1.60"
+    },
+    {
+      "SystemName": "Payments.CheckMoneyOrder",
+      "Version": "1.51"
+    },
+    {
+      "SystemName": "Shipping.FixedByWeightByTotal",
+      "Version": "2.36"
+    },
+    {
+      "SystemName": "Widgets.NivoSlider",
+      "Version": "1.50"
+    }
+  ],
+  "PluginNamesToUninstall": [],
+  "PluginNamesToDelete": [],
+  "PluginNamesToInstall": [
+    {
+      "Item1": "Payments.CheckMoneyOrder",
+      "Item2": "a7c03fb0-5fc6-4109-82ef-161d5f576f5a"
+    },
+    {
+      "Item1": "Shipping.FixedByWeightByTotal",
+      "Item2": "a7c03fb0-5fc6-4109-82ef-161d5f576f5a"
+    }
+  ]
+}

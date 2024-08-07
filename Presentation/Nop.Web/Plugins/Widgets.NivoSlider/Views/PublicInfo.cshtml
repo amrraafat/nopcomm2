@@ -1,0 +1,116 @@
+﻿@model Nop.Plugin.Widgets.NivoSlider.Models.PublicInfoModel
+@using Nop.Web.Components
+
+@{
+    Layout = "";
+}
+
+<link rel="stylesheet" href="~/Plugins/Widgets.NivoSlider/Content/nivoslider/nivo-slider.css" />
+<link rel="stylesheet" href="~/Plugins/Widgets.NivoSlider/Content/nivoslider/themes/custom/custom.css" />
+<script asp-exclude-from-bundle="true" src="~/Plugins/Widgets.NivoSlider/Scripts/jquery.nivo.slider.js" asp-location="Footer"></script>
+
+<div class="slider-wrapper theme-custom">
+    <div id="nivo-slider" class="nivoSlider">
+        @* @{
+            var dataSlide1 = new ViewDataDictionary(ViewData)
+            {
+                {"pictureUrl", Model.Picture1Url},
+                { "text", Model.Text1},
+                { "link", Model.Link1},
+                {"alttext", Model.AltText1 }
+            };
+
+            @await Html.PartialAsync("~/Plugins/Widgets.NivoSlider/Views/_PublicInfo.SliderLine.cshtml", dataSlide1)
+        }
+        
+        @{
+            var dataSlide2 = new ViewDataDictionary(ViewData)
+            {
+                {"pictureUrl", Model.Picture2Url},
+                { "text", Model.Text2},
+                { "link", Model.Link2},
+                {"alttext", Model.AltText2 }
+            };
+
+            @await Html.PartialAsync("~/Plugins/Widgets.NivoSlider/Views/_PublicInfo.SliderLine.cshtml", dataSlide2)
+        }
+        
+        @{
+            var dataSlide3 = new ViewDataDictionary(ViewData)
+            {
+                {"pictureUrl", Model.Picture3Url},
+                { "text", Model.Text3},
+                { "link", Model.Link3},
+                {"alttext", Model.AltText3 },
+                { "dataTransition", "slideInLeft"}
+            };
+
+            @await Html.PartialAsync("~/Plugins/Widgets.NivoSlider/Views/_PublicInfo.SliderLine.cshtml", dataSlide3)
+        }
+
+        @{
+            var dataSlide4 = new ViewDataDictionary(ViewData)
+            {
+                {"pictureUrl", Model.Picture4Url},
+                { "text", Model.Text4},
+                { "link", Model.Link4},
+                {"alttext", Model.AltText4 }
+            };
+
+            @await Html.PartialAsync("~/Plugins/Widgets.NivoSlider/Views/_PublicInfo.SliderLine.cshtml", dataSlide4)
+        }
+        
+        @{
+            var dataSlide5 = new ViewDataDictionary(ViewData)
+            {
+                {"pictureUrl", Model.Picture5Url},
+                { "text", Model.Text5},
+                { "link", Model.Link5},
+                {"alttext", Model.AltText5 }
+            };
+
+            @await Html.PartialAsync("~/Plugins/Widgets.NivoSlider/Views/_PublicInfo.SliderLine.cshtml", dataSlide5)
+        } *@
+        <section class="video-banner">
+            <div class="video-container" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+                <iframe src="https://www.youtube.com/embed/BapSQFJPMM0?autoplay=1&mute=1&loop=1&playlist=BapSQFJPMM0&playsinline=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                </iframe>
+
+            </div>
+            <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <!-- المحتوى فوق الفيديو هنا -->
+                <div class="banner text-center">
+                    <div class="banner-text">
+                        <h1>Organizza il tuo viaggio a:</h1>
+                        <h2>Sharm el Sheikh</h2>
+                        <h3>CON OMAR</h3>
+                        <div class="col-lg-12 pt-lg-5 text-center">
+                            <div class="header-logo">
+                                @await Component.InvokeAsync(typeof(SearchBoxViewComponent))
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- إضافة نموذج البحث هنا -->
+            </div>
+        </section>
+
+
+
+
+        <!-- إضافة نموذج البحث هنا -->
+        
+            
+     
+
+
+
+
+
+
+    </div>
+</div>

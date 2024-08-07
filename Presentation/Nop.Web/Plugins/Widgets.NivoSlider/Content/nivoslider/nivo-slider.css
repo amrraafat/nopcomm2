@@ -1,0 +1,220 @@
+﻿/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+.banner-text {
+	background-color: rgb(67 107 170 / 50%); /* Black background with transparency */
+	padding: 20px;
+	border-radius: 10px;
+}
+
+	.banner-text h1 {
+		font-size: 3em; /* Adjust size as needed */
+		margin: 0;
+		font-family: "Salsa", Sans-serif;
+		color: #cfe7ff;
+	}
+
+	.banner-text h2 {
+		font-size: 4em; /* Adjust size as needed */
+		margin: 10px 0;
+		color: #cfe7ff;
+	}
+
+	.banner-text h3 {
+		margin: 0;
+		font-family: "Salsa", Sans-serif;
+		font-size: 30px;
+		color: #cfe7ff;
+	}
+
+.video-banner {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 824px; /* يمكنك ضبط الارتفاع كما تفضل */
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none; /* يمنع التفاعل مع الفيديو */
+}
+
+	.video-container iframe {
+		
+		pointer-events: none;
+		width: 1519.2px;
+		height: 854.55px;
+	}
+
+.video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.3); /* لضبط شفافية الخلفية */
+}
+
+	.video-overlay h1 {
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+
+
+@media (max-width: 767px) {
+	
+
+	.banner-text {
+		padding: 10px;
+	}
+
+		.banner-text h1 {
+			font-size: 15px; /* Smaller font size for smaller screens */
+		}
+
+		.banner-text h2 {
+			font-size: 20px; /* Smaller font size for smaller screens */
+		}
+
+		.banner-text h3 {
+			font-size: 15px /* Smaller font size for smaller screens */
+		}
+	.video-banner {
+		height: 228px; /* يمكنك ضبط الارتفاع كما تفضل */
+	}
+
+	.nivoSlider {
+		height: 177px !important;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+.nivoSlider {
+	position: relative;
+	width: 100%;
+	height: 704px;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+    height: auto;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:8;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding: 15px 0;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
