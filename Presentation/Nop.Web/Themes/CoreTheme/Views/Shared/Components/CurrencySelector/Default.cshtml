@@ -1,6 +1,6 @@
 ﻿@model CurrencySelectorModel
 @inject Nop.Core.IWebHelper webHelper
-@* @if (Model.AvailableCurrencies.Count > 1)
+@if (Model.AvailableCurrencies.Count > 1)
 {
     var returnUrl = webHelper.GetRawUrl(Context.Request);
     var currencies = await Model.AvailableCurrencies.SelectAwait(async x => new SelectListItem
@@ -11,4 +11,3 @@
     }).ToListAsync();
     <select Class="form-control" id="customerCurrency" name="customerCurrency" asp-items="@currencies" onchange="setLocation(this.value);" aria-label="@T("Currency.Selector.Label")"></select>
 }
- *@

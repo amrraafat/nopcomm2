@@ -2,81 +2,94 @@
 @using Nop.Core.Domain.Catalog
 @using Nop.Core.Domain.Topics
 
-<!-- Spinner -->
-<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-</div>
-<!-- Spinner End -->
-<!-- Topbar -->
-
-<!-- Topbar End -->
-<!-- Navbar & Hero Start -->
-<div class="container-fluid position-relative p-0">
-    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-        <div class="header-logo">
-            @await Component.InvokeAsync(typeof(LogoViewComponent))
+<div class="rd-navbar-wrap rd-navbar-corporate">
+    <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-md-stick-up-offset="130px" data-lg-stick-up-offset="100px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true">
+        <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+        <div class="rd-navbar-top-panel rd-navbar-collapse novi-background">
+            <div class="rd-navbar-top-panel-inner">
+                <ul class="list-inline">
+                    <li class="box-inline list-inline-item">
+                        <span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-phone"></span>
+                        <ul class="list-comma">
+                            <li><a href="tel:#">1-800-1234-567</a></li>
+                            <li><a href="tel:#">1-800-6780-345</a></li>
+                        </ul>
+                    </li>
+                    <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">2130 Fulton Street, San Diego, CA 94117-1080 USA</a></li>
+                    <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-email"></span><a href="mailto:#">mail@demolink.org</a></li>
+                </ul>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook" href="#"></a></li>
+                    <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter" href="#"></a></li>
+                    <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-instagram" href="#"></a></li>
+                    <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-google-plus" href="#"></a></li>
+                    <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-linkedin" href="#"></a></li>
+                </ul>
+            </div>
+            <div class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary button-nina" href="https://www.templatemonster.com/website-templates/62466.html" target="_blank">buy template now</a></div>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ms-auto py-0">
-                @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderMenuBefore, additionalData = Model })
-                @if (Model.DisplayHomepageMenuItem)
-                {
-                    <li class="nav-item"><a href="@Url.RouteUrl("Homepage")" class="nav-link"><i class="fa fa-home fa-fw"></i></a></li>
-                }
-                @if (!Model.UseAjaxMenu)
-                {
-                    var rootCategories = Model.Categories.Where(x => x.IncludeInTopMenu).ToList();
-                    @foreach (var category in rootCategories)
-                    {
-                        var categoryLineModel = new TopMenuModel.CategoryLineModel
+        <div class="rd-navbar-inner">
+            <div class="rd-navbar-panel">
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img class="logo-default" src="images/logo-default-208x46.png" alt="" width="208" height="46" /><img class="logo-inverse" src="images/logo-inverse-208x46.png" alt="" width="208" height="46" /></a></div>
+            </div>
+            <div class="rd-navbar-aside-center">
+                <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav">
+                        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderMenuBefore, additionalData = Model })
+                        @if (Model.DisplayHomepageMenuItem)
+                        {
+                            <li><a href="@Url.RouteUrl("Homepage")"><i class="fa fa-home fa-fw"></i></a></li>
+                        }
+                        @if (!Model.UseAjaxMenu)
+                        {
+                            var rootCategories = Model.Categories.Where(x => x.IncludeInTopMenu).ToList();
+                            @foreach (var category in rootCategories)
+                            {
+                                var categoryLineModel = new TopMenuModel.CategoryLineModel
                     {
                         Category = category
                     };
-                        @await Html.PartialAsync("_CategoryLine.TopMenu", categoryLineModel)
-                    }
-                }
-                @foreach (var topic in Model.Topics)
-                {
-                    <li class="nav-item"><a href="@(Url.RouteUrl<Topic>(new { SeName = topic.SeName }))" class="nav-link">@topic.Name</a></li>
-                }
-                @if (Model.NewProductsEnabled && Model.DisplayNewProductsMenuItem)
-                {
-                    <li class="nav-item"><a href="@Url.RouteUrl("NewProducts")" class="nav-link">@T("Products.NewProducts")</a></li>
-                }
-                @if (Model.DisplayProductSearchMenuItem)
-                {
-                    <li class="nav-item"><a href="@Url.RouteUrl("ProductSearch")" class="nav-link">@T("Search")</a></li>
-                }
-                @if (Model.DisplayCustomerInfoMenuItem)
-                {
-                    <li class="nav-item"><a href="@Url.RouteUrl("CustomerInfo")" class="nav-link">@T("Account.MyAccount")</a></li>
-                }
-                @if (Model.BlogEnabled && Model.DisplayBlogMenuItem)
-                {
-                    <li class="nav-item"><a href="@Url.RouteUrl("Blog")" class="nav-link">@T("Blog")</a></li>
-                }
-                @if (Model.ForumEnabled && Model.DisplayForumsMenuItem)
-                {
-                    <li class="nav-item"><a href="@Url.RouteUrl("Boards")" class="nav-link">@T("Forum.Forums")</a></li>
-                }
-                @if (Model.DisplayContactUsMenuItem)
-                {
-                    <li class="nav-item"><a href="@Url.RouteUrl("ContactUs")" class="nav-link">@T("ContactUs")</a></li>
-                }
-                @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderMenuAfter, additionalData = Model })
-            </ul>
-            <a href="" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                                @await Html.PartialAsync("_CategoryLine.TopMenu", categoryLineModel)
+                            }
+                        }
+                        @foreach (var topic in Model.Topics)
+                        {
+                            <li><a href="@(Url.RouteUrl<Topic>(new { SeName = topic.SeName }))">@topic.Name</a></li>
+                        }
+                        @if (Model.NewProductsEnabled && Model.DisplayNewProductsMenuItem)
+                        {
+                            <li><a href="@Url.RouteUrl("NewProducts")">@T("Products.NewProducts")</a></li>
+                        }
+                        @if (Model.DisplayProductSearchMenuItem)
+                        {
+                            <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a></li>
+                        }
+                        @if (Model.DisplayCustomerInfoMenuItem)
+                        {
+                            <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
+                        }
+                        @if (Model.BlogEnabled && Model.DisplayBlogMenuItem)
+                        {
+                            <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+                        }
+                        @if (Model.ForumEnabled && Model.DisplayForumsMenuItem)
+                        {
+                            <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+                        }
+                        @if (Model.DisplayContactUsMenuItem)
+                        {
+                            <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+                        }
+                        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderMenuAfter, additionalData = Model })
+                    </ul>
+                </div>
+            </div>
+            <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="#">Book a tour now</a></div>
         </div>
     </nav>
+</div>
 
-
-
-   
 @if (Model.UseAjaxMenu)
 {
     <script asp-location="Footer">

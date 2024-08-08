@@ -6,10 +6,17 @@
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  */
- 
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: -webkit-fill-available !important;
+	}
+}
+
+
 /* The Nivo Slider styles */
 .banner-text {
-	background-color: rgb(67 107 170 / 50%); /* Black background with transparency */
+	background-color: rgb(170 123 67 / 50%); /* Black background with transparency */
 	padding: 20px;
 	border-radius: 10px;
 }

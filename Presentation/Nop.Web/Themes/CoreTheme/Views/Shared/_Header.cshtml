@@ -8,9 +8,15 @@
     <div class="row">
         <div class="col-sm-5 col-md-5">
             @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderBefore })
+            <div class="header-logo">
+                @await Component.InvokeAsync(typeof(LogoViewComponent))
+            </div>
         </div>
         <div class="col-sm-7 col-md-7">
             <div class="header-selectors-wrapper">
+                <div class="search-box store-search-box pull-right">
+                    @await Component.InvokeAsync(typeof(SearchBoxViewComponent))
+                </div>
                 <div class="header-selectors">
                     @await Component.InvokeAsync(typeof(TaxTypeSelectorViewComponent))
                     @await Component.InvokeAsync(typeof(CurrencySelectorViewComponent))
