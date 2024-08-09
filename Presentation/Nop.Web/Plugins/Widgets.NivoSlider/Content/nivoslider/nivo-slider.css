@@ -10,6 +10,14 @@
 @media (min-width: 1200px) {
 	.container {
 		max-width: -webkit-fill-available !important;
+
+	}
+	.video-container iframe {
+		pointer-events: none;
+		width: 1519.2px;
+		height: 820.55px !important;
+		width: 1555px !important;
+		margin-top: -103px;
 	}
 }
 
@@ -45,7 +53,7 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 824px; /* يمكنك ضبط الارتفاع كما تفضل */
+	height: 617px; /* يمكنك ضبط الارتفاع كما تفضل */
 }
 
 .video-container {
@@ -110,7 +118,15 @@
 	.nivoSlider {
 		height: 177px !important;
 	}
-
+	.video-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 116% !important;
+		height: 109% !important;
+		pointer-events: none;
+		margin-top: -33px;
+	}
 }
 
 

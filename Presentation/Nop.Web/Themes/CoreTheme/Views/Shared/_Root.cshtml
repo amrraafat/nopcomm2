@@ -37,8 +37,9 @@
         </div>
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ContentAfter })
         @await Component.InvokeAsync(typeof(EuCookieLawViewComponent))
-        @await Component.InvokeAsync(typeof(FooterViewComponent))
     </div>
+        @await Component.InvokeAsync(typeof(FooterViewComponent))
+    
 </div>
 @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.BodyEndHtmlTagBefore })
 

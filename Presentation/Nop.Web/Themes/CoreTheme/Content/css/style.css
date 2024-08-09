@@ -100,15 +100,29 @@
 *     6.1 MDI
 *     6.2 FL Bigmug Line
 **/
+@media (min-width: 1200px) {
+	.parallax-text {
+		font-size: 54px !important;
+		left: 281px!important;
+	}
+}
 @media (min-width: 1400px) {
 	.html-home-page .master-wrapper-content .container {
 		width: 1533px;
 	}
 }
+.nav {
+	display: block;
+	
+}
+#newsletter-subscribe-block #newsletter-email {
+	float: revert-layer;
+	width: 334px;
+}
 
-
-
-
+.rd-navbar-panel img {
+	max-width: 50%;
+}
 
 .bg-gradient.bg-secondary-2 {
 	background-image: -moz-linear-gradient(-39deg, #6d0eb1 59%, #080ab4 100%);

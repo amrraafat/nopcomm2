@@ -1,24 +1,34 @@
 ﻿@model IList<ProductOverviewModel>
 
-@if (Model.Count > 0)
-{
-    <div class="product-grid home-page-product-grid row">
-        <div class="col-md-12">
-            <div class="title panel-heading">
-                <h2>@T("Homepage.Products")</h2>
+
+
+<section class="section section-variant-1 bg-default novi-background bg-cover">
+    <div class="container container-wide">
+        <div class="row row-fix justify-content-xl-end row-30 text-center text-xl-left">
+            <div class="col-xl-8">
+                <div class="parallax-text-wrap">
+                    <h3>@T("Homepage.Products")</h3><span class="parallax-text">OmarSharm tours</span>
+                </div>
+                <hr class="divider divider-decorate">
             </div>
+            <div class="col-xl-3 text-xl-right"><a class="button button-secondary button-nina" href="#">view all tours</a></div>
         </div>
-        <div class="product-grid">
-            <div class="item-grid">
+        <div class="row row-50">
+
+            @if (Model.Count > 0)
+            {
+
                 @foreach (var item in Model)
                 {
-                    <div class="item-box col-xs-12 col-sm-4 col-md-3 product-align">
+                    <div class="col-md-6 col-xl-4">
                         <div class="thumbnail">
                             @await Html.PartialAsync("_ProductBox", item)
                         </div>
                     </div>
                 }
-            </div>
+
+
+            }
         </div>
     </div>
-}
+</section>
