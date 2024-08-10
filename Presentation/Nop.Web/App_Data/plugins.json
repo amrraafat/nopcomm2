@@ -18,6 +18,14 @@
     {
       "SystemName": "Widgets.NivoSlider",
       "Version": "1.50"
+    },
+    {
+      "SystemName": "NopStation.Core",
+      "Version": "4.60.1.3"
+    },
+    {
+      "SystemName": "NopStation.Plugin.Widgets.OCarousels",
+      "Version": "4.60.1.1"
     }
   ],
   "PluginNamesToUninstall": [],
