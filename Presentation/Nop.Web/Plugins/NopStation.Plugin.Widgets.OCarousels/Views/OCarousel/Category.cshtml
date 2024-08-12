@@ -5,14 +5,33 @@
     <div class="owl-carousel ocarousel @Model.CustomCssClass" id="ocarousel-@(Model.Id)">
         @foreach (var categoryModel in Model.Categories)
         {
-            <div class="ocarousel-item">
-                <a href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })" title="@categoryModel.PictureModel.Title">
-                    <img alt="@categoryModel.PictureModel.AlternateText" src="@categoryModel.PictureModel.ImageUrl" title="@categoryModel.PictureModel.Title" />
-                </a>
-                <div class="category-name">
-                    <a href="@Url.RouteUrl("Category", new {SeName = categoryModel.SeName})">@categoryModel.Name</a>
+
+            <article class="event-default-wrap">
+                <div class="event-default">
+                    <figure class="event-default-image">
+                        <a href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })" title="@categoryModel.PictureModel.Title">
+                            <img alt="@categoryModel.PictureModel.AlternateText" src="@categoryModel.PictureModel.ImageUrl" title="@categoryModel.PictureModel.Title" />
+                        </a>
+                    </figure>
+                    <div class="event-default-caption">
+                        <div class="category-name">
+                            <a href="@Url.RouteUrl("Category", new {SeName = categoryModel.SeName})">@categoryModel.Name</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+            </article>
+
+
+
+            @* <div class="ocarousel-item">
+    <a href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })" title="@categoryModel.PictureModel.Title">
+    <img alt="@categoryModel.PictureModel.AlternateText" src="@categoryModel.PictureModel.ImageUrl" title="@categoryModel.PictureModel.Title" />
+    </a>
+    <div class="category-name">
+    <a href="@Url.RouteUrl("Category", new {SeName = categoryModel.SeName})">@categoryModel.Name</a>
+    </div>
+    </div> *@
         }
     </div>
 
