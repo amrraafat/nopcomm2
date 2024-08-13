@@ -1,14 +1,8 @@
-/*!
+﻿/*!
  * nopAccelerate Core Theme v2.7.0 (http://themes.nopaccelerate.com/themes/nopaccelerate-core-theme/)
  * Copyright 2022 Xcellence-IT.
  * Licensed under LICENSETYPE (http://www.nopaccelerate.com/terms/)
  */
-@media (min-width: 1400px) {
-    .html-home-page .master-wrapper-content .container {
-        width: 1533px;
-
-    }
-}
 
 /*Admin-Header-Links*/
 .master-wrapper-page.container{overflow:hidden;}

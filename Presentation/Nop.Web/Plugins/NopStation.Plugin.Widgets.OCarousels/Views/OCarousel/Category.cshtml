@@ -2,36 +2,45 @@
 
 @if (Model.Categories.Count > 0)
 {
-    <div class="owl-carousel ocarousel @Model.CustomCssClass" id="ocarousel-@(Model.Id)">
+    <div class="row row-fix justify-content-xl-end row-30 text-center text-xl-left">
+        <div class="col-xl-8">
+            <div class="parallax-text-wrap">
+                <h3>Tutte le Destinazioni</h3><span class="parallax-text">OmarSharm tours</span>
+            </div>
+            <hr class="divider divider-decorate">
+        </div>
+        <div class="col-xl-3 text-xl-right mr-5"></div>
+    </div>
+    <div class="owl-carousel ocarousel container3 @Model.CustomCssClass" id="ocarousel-@(Model.Id)">
+
         @foreach (var categoryModel in Model.Categories)
         {
-
-            <article class="event-default-wrap">
+            
+              <article class="event-default-wrap">
                 <div class="event-default">
-                    <figure class="event-default-image">
-                        <a href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })" title="@categoryModel.PictureModel.Title">
-                            <img alt="@categoryModel.PictureModel.AlternateText" src="@categoryModel.PictureModel.ImageUrl" title="@categoryModel.PictureModel.Title" />
-                        </a>
-                    </figure>
-                    <div class="event-default-caption">
-                        <div class="category-name">
-                            <a href="@Url.RouteUrl("Category", new {SeName = categoryModel.SeName})">@categoryModel.Name</a>
-                        </div>
-                    </div>
+                        <figure class="event-default-image">
+                            <a href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })" title="@categoryModel.PictureModel.Title">
+                                <img alt="@categoryModel.PictureModel.AlternateText" src="@categoryModel.PictureModel.ImageUrl" title="@categoryModel.PictureModel.Title" />
+                            </a>
+                  </figure>
+                  <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                 </div>
+                <div class="text-center pt-2">
+                    <h5><a href="@Url.RouteUrl("Category", new {SeName = categoryModel.SeName})">@categoryModel.Name</a></h5>
+                </div>
+              </article>
+              
 
-            </article>
 
 
-
-            @* <div class="ocarousel-item">
-    <a href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })" title="@categoryModel.PictureModel.Title">
-    <img alt="@categoryModel.PictureModel.AlternateText" src="@categoryModel.PictureModel.ImageUrl" title="@categoryModel.PictureModel.Title" />
-    </a>
-    <div class="category-name">
-    <a href="@Url.RouteUrl("Category", new {SeName = categoryModel.SeName})">@categoryModel.Name</a>
-    </div>
-    </div> *@
+            @*  <div class="ocarousel-item">
+                <a href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })" title="@categoryModel.PictureModel.Title">
+                    <img alt="@categoryModel.PictureModel.AlternateText" src="@categoryModel.PictureModel.ImageUrl" title="@categoryModel.PictureModel.Title" />
+                </a> 
+                <div class="category-name">
+                    <a href="@Url.RouteUrl("Category", new {SeName = categoryModel.SeName})">@categoryModel.Name</a>
+                </div>
+            </div>*@
         }
     </div>
 

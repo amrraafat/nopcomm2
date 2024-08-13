@@ -1,35 +1,4 @@
-﻿
-
-/* لجعل الصور دائرية */
-.author img {
-    border-radius: 50%; /* لجعل الصورة دائرية */
-    width: 100px; /* عرض الصورة */
-    height: 100px; /* ارتفاع الصورة */
-    object-fit: cover; /* لضمان ملاءمة الصورة داخل الدائرة */
-}
-
-/* لإضافة نجوم ذهبية تحت كل صورة */
-.author-meta {
-    position: relative;
-    text-align: center;
-    margin-top: 10px;
-}
-
-    .author-meta .star {
-        display: inline-block;
-        color: gold;
-        font-size: 1.2rem;
-        margin-top: 5px;
-    }
-
-        .author-meta .star:before {
-            content: "★★★★★";
-        }
-
-
-
-
-.carousel-grid-background {
+﻿.carousel-grid-background {
   padding: 20px;
   background-size: cover;
 }

@@ -1,4 +1,4 @@
-/*
+﻿/*
 *
 * Trunk version 1.2.2
 *
@@ -100,6 +100,77 @@
 *     6.1 MDI
 *     6.2 FL Bigmug Line
 **/
+@media (min-width: 1400px) {
+	.html-home-page .master-wrapper-content .container {
+		width: 1533px;
+		padding: 0;
+	}
+}
+
+@media (min-width: 1400px) {
+	.html-home-page .master-wrapper-content .container2 {
+		width: 1314px;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media (min-width: 1400px) {
+	.html-home-page .master-wrapper-content .container3 {
+		width: 1500px;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+
+
+/* لجعل الصور دائرية */
+.author img {
+	border-radius: 50%; /* لجعل الصورة دائرية */
+	width: 100px; /* عرض الصورة */
+	height: 100px; /* ارتفاع الصورة */
+	object-fit: cover; /* لضمان ملاءمة الصورة داخل الدائرة */
+}
+
+/* لإضافة نجوم ذهبية تحت كل صورة */
+.author-meta {
+	position: relative;
+	text-align: center;
+	margin-top: 10px;
+}
+
+	.author-meta .star {
+		display: inline-block;
+		color: gold;
+		font-size: 1.2rem;
+		margin-top: 5px;
+	}
+
+		.author-meta .star:before {
+			content: "★★★★★";
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 1200px) {
 	.parallax-text {
 		font-size: 54px !important;

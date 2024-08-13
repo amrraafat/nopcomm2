@@ -2,7 +2,7 @@
 
 @if (Model.Products.Count > 0)
 {
-    <div class="owl-carousel ocarousel @Model.CustomCssClass" id="ocarousel-@(Model.Id)">
+    <div class="owl-carousel ocarousel container3 @Model.CustomCssClass" id="ocarousel-@(Model.Id)">
         @foreach (var item in Model.Products)
         {
             <div class="item-box">
