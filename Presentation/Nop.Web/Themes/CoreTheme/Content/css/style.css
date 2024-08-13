@@ -7297,8 +7297,8 @@ textarea.form-input.form-input-lg {
 	
 	.section-lg,
 	.section-custom {
-		padding-top: 125px;
-		padding-bottom: 125px;
+		padding-top: 0px;
+		padding-bottom: 50px;
 	}
 	.section-lg.section-way-point, .section-way-point.section-custom {
 		padding-top: 165px;
@@ -7307,8 +7307,8 @@ textarea.form-input.form-input-lg {
 		padding-top: 170px;
 	}
 	.section-lg-alternative {
-		padding-top: 130px;
-		padding-bottom: 140px;
+		padding-top: 0px;
+		padding-bottom: 50px;
 	}
 	.section-xl {
 		padding-top: 165px;
