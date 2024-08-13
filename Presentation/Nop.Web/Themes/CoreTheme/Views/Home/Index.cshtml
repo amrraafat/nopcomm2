@@ -28,6 +28,7 @@
 <div class="page home-page">
     <div class="page-body">
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageTop })
+        <div class="container3">
         @await Component.InvokeAsync(typeof(TopicBlockViewComponent), new { systemName = "HomepageText" })
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBeforeCategories })
        @*  @await Component.InvokeAsync(typeof(HomepageCategoriesViewComponent)) *@
@@ -41,5 +42,6 @@
         @await Component.InvokeAsync(typeof(HomepagePollsViewComponent))
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBottom })
         @await Component.InvokeAsync(typeof(TopicBlockViewComponent), new { systemName = "HomepageBottom" })
+        </div>
     </div>
 </div>
