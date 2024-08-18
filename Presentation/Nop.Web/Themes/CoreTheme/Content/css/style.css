@@ -102,6 +102,48 @@
 
 **/
 /* تصميم العناصر المتاحة وغير المتاحة */
+.cover-image-container {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.cover-image {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+	max-height: 450px;
+}
+
+.cover-image {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+	max-height: 450px;
+}
+
+@media (max-width: 768px) {
+	.cover-image {
+		max-height: 300px;
+	}
+}
+
+@media (max-width: 480px) {
+	.cover-image {
+		max-height: 150px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
 #checkout-step-billing form, #checkout-step-shipping form, #checkout-step-shipping-method form, #checkout-step-payment-method form, #checkout-step-payment-info form {
 	margin-bottom: 0;
 }
@@ -277,18 +319,10 @@ select.form-control:not([size]):not([multiple]) {
 
 
 
-.cover-image-container {
-	width: 100%;
-	margin-bottom: 20px;
-}
 
-.cover-image {
-	width: 100%;
-	height: auto;
-	display: block;
-	object-fit: cover;
-	max-height: 500px;
-}
+
+
+
 .gallery .picture::before {
 
 	padding-top: 35% !important;

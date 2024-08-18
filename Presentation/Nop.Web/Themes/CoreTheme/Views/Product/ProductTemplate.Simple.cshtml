@@ -51,21 +51,23 @@
     }
 }
 <!--product breadcrumb-->
-@section Breadcrumb
-{
-    @await Html.PartialAsync("_ProductBreadcrumb", Model.Breadcrumb)
-}
-@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ProductDetailsAfterBreadcrumb, additionalData = Model })
 @{
     var coverPicture = Model.PictureModels.FirstOrDefault(p => p.Title == "cover");
 }
-
 @if (coverPicture != null)
 {
     <div class="cover-image-container">
         <img alt="@coverPicture.AlternateText" src="@coverPicture.ImageUrl" title="@coverPicture.Title" class="cover-image" />
     </div>
 }
+@section Breadcrumb
+{
+    @await Html.PartialAsync("_ProductBreadcrumb", Model.Breadcrumb)
+}
+@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ProductDetailsAfterBreadcrumb, additionalData = Model })
+
+
+
 <div class="master-wrapper-content container2">
     <div class="page product-details-page">
         <div class="page-body">
