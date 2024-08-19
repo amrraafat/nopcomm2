@@ -96,8 +96,8 @@
                                 addToCartText = T("ShoppingCart.PreOrder").Text;
                             }
                         }
-                        <div class="product-add-button" >
-                            <button style="padding:4px 20px" type="button" id="add-to-cart-button-@Model.ProductId" class=" btn btn-primary add-to-cart-button" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form');return false;">@addToCartText</button>
+                        <div class="product-add-button">
+                            <button type="button" id="add-to-cart-button-@Model.ProductId" class=" btn btn-primary add-to-cart-button" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form');return false;">@addToCartText</button>
                         </div>
                     }
                 </div>
