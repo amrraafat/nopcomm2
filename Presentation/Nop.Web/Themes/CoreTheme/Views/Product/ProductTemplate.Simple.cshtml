@@ -164,7 +164,12 @@
                                         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ProductDetailsInsideOverviewButtonsAfter, additionalData = Model })
                                     </div>
                                     @await Html.PartialAsync("_ShareButton", Model)
+
                                     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ProductDetailsOverviewBottom, additionalData = Model })
+                                    <a class="button button-sm button-secondary button-nina" href="https://wa.me/+201068049282?text=https://nice-aryabhata.216-158-227-194.plesk.page@(Url.RouteUrl<Product>(new { SeName = Model.SeName }))" target="_blank">
+                                        whatsapp
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:50px;height:50px;">
+                                    </a>
                                 </div>
                             </div>
                         </div>

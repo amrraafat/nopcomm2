@@ -94,6 +94,11 @@
         {
             <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
         }
+    <li>
+        <a href="https://wa.me/1234567890" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:50px;height:50px;">
+        </a>
+    </li>
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderMenuAfter, additionalData = Model })
     </ul>
 
