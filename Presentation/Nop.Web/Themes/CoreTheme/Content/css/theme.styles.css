@@ -1497,7 +1497,7 @@ ul.poll-results{margin-top:10px;}
 
 /*New Style */
 .pm-title-text.form-control {width:44%;}
-.qty-input.form-control {margin:0 auto;width:60%;}
+.qty-input.form-control {margin:0 auto !important;width:100% !important; }
 .qty-dropdown.form-control {width: 60%;margin:0 auto;padding:6px 5px;}
 .tab-content {margin-top:15px;}
 .method-list {padding:0;}

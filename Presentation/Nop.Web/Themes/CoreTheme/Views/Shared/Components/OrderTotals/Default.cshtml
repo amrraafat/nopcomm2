@@ -24,7 +24,7 @@
                 }
                 @if (!Model.HideShippingTotal)
                 {
-                    <tr>
+                    @* <tr>
                         <td class="cart-total-left">
                             <span class="nobr">
                                 @T("ShoppingCart.Totals.Shipping"):
@@ -55,7 +55,7 @@
                                 }
                             </span>
                         </td>
-                    </tr>
+                    </tr> *@
                 }
                 @if (!string.IsNullOrEmpty(Model.PaymentMethodAdditionalFee))
                 {

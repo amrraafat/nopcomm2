@@ -4,14 +4,6 @@
   ],
   "InstalledPlugins": [
     {
-      "SystemName": "Payments.Manual",
-      "Version": "1.60"
-    },
-    {
-      "SystemName": "Payments.CheckMoneyOrder",
-      "Version": "1.51"
-    },
-    {
       "SystemName": "Shipping.FixedByWeightByTotal",
       "Version": "2.36"
     },
@@ -26,15 +18,15 @@
     {
       "SystemName": "NopStation.Plugin.Widgets.OCarousels",
       "Version": "4.60.1.1"
+    },
+    {
+      "SystemName": "Payments.CashOnDelivery",
+      "Version": "1.46"
     }
   ],
   "PluginNamesToUninstall": [],
   "PluginNamesToDelete": [],
   "PluginNamesToInstall": [
-    {
-      "Item1": "Payments.CheckMoneyOrder",
-      "Item2": "a7c03fb0-5fc6-4109-82ef-161d5f576f5a"
-    },
     {
       "Item1": "Shipping.FixedByWeightByTotal",
       "Item2": "a7c03fb0-5fc6-4109-82ef-161d5f576f5a"

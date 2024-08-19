@@ -2,6 +2,7 @@
 ** nopCommerce country select js functions
 */
 +function ($) {
+    
     'use strict';
     if ('undefined' == typeof (jQuery)) {
         throw new Error('jQuery JS required');
