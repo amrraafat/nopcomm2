@@ -93,7 +93,12 @@
 
 
 @media (max-width: 767px) {
-	
+	.text-center {
+		text-align: center;
+		max-width: 65%;
+		max-height: 65%;
+		margin-top: -46px;
+	}
 
 	.banner-text {
 		padding: 10px;
@@ -111,20 +116,20 @@
 			font-size: 15px /* Smaller font size for smaller screens */
 		}
 	.video-banner {
-		height: 228px; /* يمكنك ضبط الارتفاع كما تفضل */
+		height: 184px; /* يمكنك ضبط الارتفاع كما تفضل */
 	}
 
 	.nivoSlider {
-		height: 177px !important;
+		height: 145px !important;
 	}
 	.video-container {
-		position: absolute;
 		top: 0;
 		left: 0;
-		width: 116% !important;
-		height: 109% !important;
+		width: 158% !important;
+		height: 158% !important;
 		pointer-events: none;
-		margin-top: -33px;
+		margin-top: -72px;
+		margin-left: -92px;
 	}
 }
 
