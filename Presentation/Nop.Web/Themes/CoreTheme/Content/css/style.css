@@ -872,6 +872,12 @@ mark,
 }
 
 @media (max-width: 767px) {
+	.text-center {
+		text-align: center;
+		 max-width: 100%; 
+		 max-height: 100%;
+		 margin-top: 0px;
+	}
 	.image-responsive {
 		width: 100%;
 		max-width: 340px;
